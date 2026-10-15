@@ -14,13 +14,13 @@
 <style>
 :root{
   --bg:#f5f6f8; --surface:#ffffff; --line:#e3e6ea; --text:#15181d; --muted:#5d6672;
-  --accent:#e8710a; --accent-soft:#fff1e4; --blue:#1f6feb; --blue-soft:#e8f0fe; --green:#16a34a; --green-soft:#e7f6ec;
+  --accent:#e8710a; --accent-soft:#fff1e4; --blue:#1f6feb; --blue-soft:#e8f0fe; --green:#2563eb; --green-soft:#e8efff;
   --grid:rgba(21,24,29,.045); --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
 }
 @media (prefers-color-scheme:dark){
   :root{
     --bg:#0f1115; --surface:#171a20; --line:#272c34; --text:#e8eaed; --muted:#9aa3ae;
-    --accent:#ff8a2a; --accent-soft:#2a1d10; --blue:#5b9cff; --blue-soft:#132036; --green:#3ccf72; --green-soft:#10261a;
+    --accent:#ff8a2a; --accent-soft:#2a1d10; --blue:#5b9cff; --blue-soft:#132036; --green:#6b9bff; --green-soft:#131f3a;
     --grid:rgba(255,255,255,.035); --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
   }
 }
@@ -54,7 +54,7 @@ h1 em{font-style:normal;color:var(--accent)}
 .card-head{display:flex;gap:16px;align-items:flex-start}
 .icon{flex:0 0 56px;height:56px;border-radius:14px;display:grid;place-items:center}
 .icon svg{width:28px;height:28px}
-.app-icon{flex:0 0 56px;width:56px;height:56px;border-radius:14px;object-fit:cover;border:1px solid var(--line)}
+.app-icon{flex:0 0 56px;width:56px;height:56px;border-radius:14px;object-fit:contain}
 @media (max-width:520px){.app-icon{flex-basis:48px;width:48px;height:48px}}
 .plc .icon{background:var(--accent-soft);color:var(--accent)}
 .pm .icon{background:var(--blue-soft);color:var(--blue)}
@@ -132,9 +132,7 @@ footer a:hover{text-decoration:underline}
     <!-- Project Manager -->
     <article class="card pm">
       <div class="card-head">
-        <div class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M8 14l2 2 4-4"/></svg>
-        </div>
+        <img class="app-icon" src="img/project-manager.png" alt="프로젝트 매니저 아이콘" width="56" height="56">
         <div>
           <h2 class="title">Project Manager<small>프로젝트 매니저</small></h2>
           <div class="platforms"><span class="chip">Android</span><span class="chip">Windows PC</span></div>
@@ -155,9 +153,7 @@ footer a:hover{text-decoration:underline}
     <!-- PDF Moa -->
     <article class="card pdf">
       <div class="card-head">
-        <div class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
-        </div>
+        <img class="app-icon" src="img/pdf-moa.png" alt="PDF 모아 아이콘" width="56" height="56">
         <div>
           <h2 class="title">PDF 모아<small>PDF 합치기·편집</small></h2>
           <div class="platforms"><span class="chip">Windows PC</span><span class="chip beta">테스트판 1.3.0-rc1</span></div>
